@@ -50,41 +50,5 @@ def search(order):
 			pass
 		cnt+=1
 	print('\n')
- 
-# get_order(input("Enter the order you're looking for:").lower(), results.find_all("dl"))
-
-'''
-
-#Finding the exact data we want
-results = soup.find(id="mw-content-text")
-def get_order(order, items):
-	item_title = [item.find('dt') for item in items]
-	item_title.pop()
-	cnt = 1 
-	for item in item_title:
-		if order == item.text.lower():
-			order = order.split()[2]
-			break
-		elif cnt >= len(item_title):
-			print('The order does not exist')
-			
-		cnt += 1
-	print('\n')
-
-	cnt = 1 
-	for item in items:
-		content = item.find('dd')
-		
-		if order in content.text.lower(): 
-			print(order.title())
-			print(content.text)
-
-			break
-		elif cnt <= len(items):
-			pass
-		cnt+=1
-	print('\n')
-
-'''
 if __name__ == "__main__":
     main()
